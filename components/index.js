@@ -1,3 +1,4 @@
 import NavOptions from './NavOptions';
+import GoogleAutoComplete from './GoogleAutoComplete';
 
-export { NavOptions };
+export { NavOptions, GoogleAutoComplete };

@@ -12,6 +12,8 @@ import { HomeScreen, MapScreen } from './screens';
 export default function App() {
   const Stack = createStackNavigator();
 
+
+
   return (
     <Provider store={store}>
       <NavigationContainer>

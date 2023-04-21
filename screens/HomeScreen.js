@@ -1,13 +1,14 @@
 import { StyleSheet, Text, SafeAreaView, View, Image } from 'react-native';
 import React from 'react';
 import tw from 'tailwind-react-native-classnames';
-import { NavOptions } from '../components';
+import { NavOptions, GoogleAutoComplete } from '../components';
 // import { setOrigin, selectNavState } from '../store/slices/navSlice';
 // import { useDispatch, useSelector } from 'react-redux';
 
+
 const HomeScreen = () => {
-//   const dispatch = useDispatch();
-//   const { origin, destination, travelTimeInformation } = useSelector(selectNavState);
+  //   const dispatch = useDispatch();
+  //   const { origin, destination, travelTimeInformation } = useSelector(selectNavState);
 
   return (
     <SafeAreaView style={tw`bg-white h-full`}>
@@ -19,6 +20,7 @@ const HomeScreen = () => {
           }}
           style={{ width: 100, height: 100, resizeMode: 'contain' }}
         />
+        <GoogleAutoComplete />
         <NavOptions />
       </View>
     </SafeAreaView>

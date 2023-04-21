@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text } from 'react-native';
 import { Provider } from 'react-redux';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import store from './store';
 import { HomeScreen } from './screens';
@@ -8,8 +9,10 @@ import { HomeScreen } from './screens';
 export default function App() {
   return (
     <Provider store={store}>
+      <SafeAreaProvider>
         <HomeScreen />
         <StatusBar style='auto' />
+      </SafeAreaProvider>
     </Provider>
   );
 }

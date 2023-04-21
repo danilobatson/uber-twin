@@ -41,11 +41,13 @@ const NavOptions = () => {
           <TouchableOpacity
             onPress={() => navigation.navigate(item.screen)}
             style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 w-40`}
+            accessibilityRole='screen navigation'
           >
             <View>
               <Image
                 style={{ width: 120, height: 120, resizeMode: 'contain' }}
                 source={{ uri: item.image }}
+                accessibilityLabel='Card Image'
               />
               <Text style={tw`mt-2 text-lg font-semibold`}>{item.title}</Text>
               <Icon
@@ -53,6 +55,7 @@ const NavOptions = () => {
                 type='antdesign'
                 name='arrowright'
                 color='white'
+                accessibilityLabel='Right Arrow'
               />
             </View>
           </TouchableOpacity>

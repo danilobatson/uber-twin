@@ -1,18 +1,33 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { render, screen } from '@testing-library/react-native';
+import { render, screen, waitFor } from '@testing-library/react-native';
 
 import HomeScreen from '../HomeScreen';
-import { before, beforeEach } from 'node:test';
+import { NavigationContainer } from '@react-navigation/native';
 
 describe('<HomeScreen />', () => {
+  beforeEach(async () => {
+    await waitFor(async () =>
+      render(
+        <NavigationContainer>
+          <HomeScreen />
+        </NavigationContainer>
+      )
+    );
+  });
+
   it('renders correctly', () => {
-    const tree = renderer.create(<HomeScreen />).toJSON();
+    const tree = renderer
+      .create(
+        <NavigationContainer>
+          <HomeScreen />
+        </NavigationContainer>
+      )
+      .toJSON();
     expect(tree).toMatchSnapshot();
-  }); 
+  });
   it('Uber logo has accessible label', () => {
-    render(<HomeScreen />);
     expect(screen.getByLabelText('Uber Logo')).toBeTruthy();
   });
 });

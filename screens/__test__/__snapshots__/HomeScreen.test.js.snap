@@ -102,7 +102,7 @@ exports[`<HomeScreen /> renders correctly 1`] = `
               }
               accessible={true}
               collapsable={false}
-              focusable={false}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -186,7 +186,30 @@ exports[`<HomeScreen /> renders correctly 1`] = `
                         }
                       }
                     >
-                      <Text />
+                      <Text
+                        allowFontScaling={false}
+                        selectable={false}
+                        style={
+                          [
+                            {
+                              "color": "white",
+                              "fontSize": 24,
+                            },
+                            {
+                              "backgroundColor": "transparent",
+                            },
+                            {
+                              "fontFamily": "anticon",
+                              "fontStyle": "normal",
+                              "fontWeight": "normal",
+                            },
+                            {},
+                          ]
+                        }
+                        testID="iconIcon"
+                      >
+                        
+                      </Text>
                     </View>
                   </View>
                 </View>
@@ -225,7 +248,7 @@ exports[`<HomeScreen /> renders correctly 1`] = `
               }
               accessible={true}
               collapsable={false}
-              focusable={false}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -309,7 +332,30 @@ exports[`<HomeScreen /> renders correctly 1`] = `
                         }
                       }
                     >
-                      <Text />
+                      <Text
+                        allowFontScaling={false}
+                        selectable={false}
+                        style={
+                          [
+                            {
+                              "color": "white",
+                              "fontSize": 24,
+                            },
+                            {
+                              "backgroundColor": "transparent",
+                            },
+                            {
+                              "fontFamily": "anticon",
+                              "fontStyle": "normal",
+                              "fontWeight": "normal",
+                            },
+                            {},
+                          ]
+                        }
+                        testID="iconIcon"
+                      >
+                        
+                      </Text>
                     </View>
                   </View>
                 </View>

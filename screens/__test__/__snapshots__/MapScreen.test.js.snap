@@ -3,7 +3,22 @@
 exports[`<MapScreen /> renders correctly 1`] = `
 <View>
   <Text>
-    MapScreen
+    Here is the map stuff...
   </Text>
+  <View />
+  <View
+    style={
+      {
+        "height": "50%",
+      }
+    }
+  />
+  <View
+    style={
+      {
+        "height": "50%",
+      }
+    }
+  />
 </View>
 `;

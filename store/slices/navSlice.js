@@ -27,12 +27,6 @@ export const { setOrigin, setDestination, setTravelTimeInformation } =
   navSlice.actions;
 
 //SELECTORS - This is how we pull information from the Global store slice
-export const selectOrigin = (state) => state.nav.origin;
-export const selectDestination = (state) => state.nav.destination;
-export const selectTravelTimeInformation = (state) =>
-  state.nav.travelTimeInformation;
-export const selectNav = (state) => state.nav;
-
-export const { origin, destination, travelTimeInformation } = selectNav;
+export const selectNavState = (state) => state.nav;
 
 export default navSlice.reducer;

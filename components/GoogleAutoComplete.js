@@ -13,6 +13,7 @@ const GoogleAutoComplete = () => {
   const dispatch = useDispatch();
   const { origin, destination, travelTimeInformation } =
     useSelector(selectNavState);
+  console.log('origin', origin);
 
   return (
     <GooglePlacesAutocomplete
@@ -31,6 +32,7 @@ const GoogleAutoComplete = () => {
           })
         );
         dispatch(setDestination(null));
+        console.log('origin', origin);
       }}
       debounce={400}
       styles={{
@@ -40,10 +42,6 @@ const GoogleAutoComplete = () => {
         textInput: {
           fontSize: 18,
         },
-      }}
-      onPress={(data, details = null) => {
-        // 'details' is provided when fetchDetails = true
-        console.log(data, details);
       }}
       query={{
         key: GOOGLE_MAPS_API_KEY,

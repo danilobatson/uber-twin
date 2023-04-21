@@ -25,9 +25,11 @@ describe('<HomeScreen />', () => {
   beforeEach(async () => {
     await waitFor(async () =>
       render(
-        <NavigationContainer>
-          <HomeScreen />
-        </NavigationContainer>
+        <Provider store={store}>
+          <NavigationContainer>
+            <HomeScreen />
+          </NavigationContainer>
+        </Provider>
       )
     );
   });
@@ -35,9 +37,11 @@ describe('<HomeScreen />', () => {
   it('renders correctly', () => {
     const tree = renderer
       .create(
-        <NavigationContainer>
-          <HomeScreen />
-        </NavigationContainer>
+        <Provider store={store}>
+          <NavigationContainer>
+            <HomeScreen />
+          </NavigationContainer>
+        </Provider>
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
@@ -54,13 +58,6 @@ describe('<HomeScreen />', () => {
 });
 
 describe('Redux for navReducer', () => {
-  const component = (
-    <Provider store={store}>
-      <NavigationContainer>
-        <HomeScreen />
-      </NavigationContainer>
-    </Provider>
-  );
   test('should return initial nav state', () => {
     expect(selectNavState(store.getState())).toEqual({
       origin: null,

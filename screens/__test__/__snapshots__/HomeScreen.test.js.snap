@@ -34,6 +34,56 @@ exports[`<HomeScreen /> renders correctly 1`] = `
         }
       }
     />
+    <View
+      pointerEvents="box-none"
+      style={
+        [
+          {
+            "flex": 1,
+          },
+          {
+            "flex": 0,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "flexDirection": "row",
+            },
+            undefined,
+          ]
+        }
+      >
+        <TextInput
+          clearButtonMode="while-editing"
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          onFocus={[Function]}
+          placeholder="Where From?"
+          style={
+            [
+              {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 5,
+                "flex": 1,
+                "fontSize": 15,
+                "height": 44,
+                "marginBottom": 5,
+                "paddingHorizontal": 10,
+                "paddingVertical": 5,
+              },
+              {
+                "fontSize": 18,
+              },
+            ]
+          }
+          value=""
+        />
+      </View>
+    </View>
     <View>
       <RCTScrollView
         data={
@@ -83,6 +133,7 @@ exports[`<HomeScreen /> renders correctly 1`] = `
             }
           >
             <View
+              accessibilityRole="screen navigation"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -128,6 +179,7 @@ exports[`<HomeScreen /> renders correctly 1`] = `
             >
               <View>
                 <Image
+                  accessibilityLabel="Card Image"
                   source={
                     {
                       "uri": "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_485,h_385/f_auto,q_auto/products/carousel/UberX.png",
@@ -161,6 +213,7 @@ exports[`<HomeScreen /> renders correctly 1`] = `
                   }
                 >
                   <View
+                    accessibilityLabel="Right Arrow"
                     style={
                       {
                         "backgroundColor": "rgba(0, 0, 0, 1)",
@@ -229,6 +282,7 @@ exports[`<HomeScreen /> renders correctly 1`] = `
             }
           >
             <View
+              accessibilityRole="screen navigation"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -274,6 +328,7 @@ exports[`<HomeScreen /> renders correctly 1`] = `
             >
               <View>
                 <Image
+                  accessibilityLabel="Card Image"
                   source={
                     {
                       "uri": "https://i.pinimg.com/originals/4f/eb/74/4feb745209cf7aba57463b20d27b61e3.png",
@@ -307,6 +362,7 @@ exports[`<HomeScreen /> renders correctly 1`] = `
                   }
                 >
                   <View
+                    accessibilityLabel="Right Arrow"
                     style={
                       {
                         "backgroundColor": "rgba(0, 0, 0, 1)",

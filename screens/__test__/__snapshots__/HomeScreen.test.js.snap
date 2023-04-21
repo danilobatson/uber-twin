@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomeScreen /> renders correctly 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "backgroundColor": "rgba(255, 255, 255, 1)",
+      "height": "100%",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "paddingBottom": 20,
+        "paddingLeft": 20,
+        "paddingRight": 20,
+        "paddingTop": 20,
+      }
+    }
+  >
+    <Image
+      accessibilityLabel="Uber Logo"
+      source={
+        {
+          "uri": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png",
+        }
+      }
+      style={
+        {
+          "height": 100,
+          "resizeMode": "contain",
+          "width": 100,
+        }
+      }
+    />
+  </View>
+</RCTSafeAreaView>
+`;

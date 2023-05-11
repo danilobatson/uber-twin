@@ -43,7 +43,7 @@ const NavigateCard = () => {
             }}
           />
         </View>
-        <NavFavorites />
+        <NavFavorites nav='destination' />
       </View>
     </SafeAreaView>
   );

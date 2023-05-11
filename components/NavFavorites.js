@@ -9,7 +9,7 @@ import React from 'react';
 import { Icon } from 'react-native-elements';
 import tw from 'tailwind-react-native-classnames';
 import { useDispatch } from 'react-redux';
-import { setDestination } from '../store/slices/navSlice';
+import { setDestination, setOrigin } from '../store/slices/navSlice';
 
 const data = [
   {
@@ -31,8 +31,27 @@ const data = [
     },
   },
 ];
-const NavFavorites = () => {
+const NavFavorites = ({ nav }) => {
   const dispatch = useDispatch();
+
+  const callDispatch = (geometry, destination) => {
+    
+    nav === 'destination' &&
+      dispatch(
+        setDestination({
+          location: geometry.location,
+          description: destination,
+        })
+      );
+
+    nav === 'origin' &&
+      dispatch(
+        setOrigin({
+          location: geometry.location,
+          description: destination,
+        })
+      );
+  };
 
   return (
     <FlatList
@@ -45,12 +64,7 @@ const NavFavorites = () => {
         <TouchableOpacity
           style={tw`flex-row items-center p-5`}
           onPress={() => {
-            dispatch(
-              setDestination({
-                location: geometry.location,
-                description: destination,
-              })
-            );
+            callDispatch(geometry, destination);
           }}
         >
           <Icon

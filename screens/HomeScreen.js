@@ -18,7 +18,7 @@ const HomeScreen = () => {
         />
         <GoogleAutoComplete />
         <NavOptions />
-        <NavFavorites />
+        <NavFavorites nav='origin' />
       </View>
     </SafeAreaView>
   );

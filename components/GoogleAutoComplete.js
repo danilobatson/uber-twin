@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { GOOGLE_MAPS_API_KEY } from '@env';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,8 +14,16 @@ const GoogleAutoComplete = () => {
   const { origin, destination, travelTimeInformation } =
     useSelector(selectNavState);
 
+  const homeScreenRef = useRef();
+
+  useEffect(() => {
+    if (!origin) return;
+    homeScreenRef.current?.setAddressText(origin.description);
+  }, [origin]);
+
   return (
     <GooglePlacesAutocomplete
+      ref={homeScreenRef}
       placeholder='Where From?'
       nearbyPlacesAPI='GooglePlacesSearch'
       enablePoweredByContainer={false}

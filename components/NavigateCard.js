@@ -1,19 +1,16 @@
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import tw from 'tailwind-react-native-classnames';
-import { useSelector } from 'react-redux';
-import { selectNavState } from '../store/slices/navSlice';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { GOOGLE_MAPS_API_KEY } from '@env';
 import { useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/core';
 import { setDestination } from '../store/slices/navSlice';
-import { NavFavorites } from './';
+import NavFavorites from './NavFavorites';
 
 const NavigateCard = () => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
-  const { origin } = useSelector(selectNavState);
   const keyboardVerticalOffset = Platform.OS === 'ios' ? 400 : 40;
 
   return (

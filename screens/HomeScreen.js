@@ -1,7 +1,7 @@
 import { StyleSheet, Text, SafeAreaView, View, Image } from 'react-native';
 import React from 'react';
 import tw from 'tailwind-react-native-classnames';
-import { NavOptions, GoogleAutoComplete } from '../components';
+import { NavOptions, GoogleAutoComplete, NavFavorites } from '../components';
 
 
 const HomeScreen = () => {
@@ -18,6 +18,7 @@ const HomeScreen = () => {
         />
         <GoogleAutoComplete />
         <NavOptions />
+        <NavFavorites />
       </View>
     </SafeAreaView>
   );

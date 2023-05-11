@@ -10,6 +10,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/core';
 import { setDestination } from '../store/slices/navSlice';
 
+
 const NavigateCard = () => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
@@ -29,6 +30,7 @@ const NavigateCard = () => {
             fetchDetails={true}
             returnKeyType={'search'}
             minLength={2}
+            keepResultsAfterBlur={true}
             onPress={(data, details = null) => {
               dispatch(
                 setDestination({

@@ -8,18 +8,18 @@ import { selectNavState } from '../store/slices/navSlice';
 const Map = () => {
   const { origin } = useSelector(selectNavState);
   return (
-    <View>
-      {origin?.location && (
-        <MapView
-          style={tw`h-1/2`}
-          mapType='mutedStandard'
-          initialRegion={{
-            latitude: origin.location.lat,
-            longitude: origin.location.lng,
-            latitudeDelta: 0.005,
-            longitudeDelta: 0.005,
-          }}
-        >
+    <>
+      <MapView
+        style={tw`flex-1`}
+        mapType='mutedStandard'
+        initialRegion={{
+          latitude: origin.location.lat,
+          longitude: origin.location.lng,
+          latitudeDelta: 0.005,
+          longitudeDelta: 0.005,
+        }}
+      >
+        {origin?.location && (
           <Marker
             coordinate={{
               latitude: origin.location.lat,
@@ -29,9 +29,9 @@ const Map = () => {
             description={origin.description}
             identifier='origin'
           />
-        </MapView>
-      )}
-    </View>
+        )}
+      </MapView>
+    </>
   );
 };
 

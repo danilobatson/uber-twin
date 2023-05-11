@@ -6,13 +6,17 @@ import { Map } from '../components';
 const MapScreen = () => {
   return (
     <View>
-      <Text>Here is the map stuff...</Text>
-      <Map />
-      <View style={tw`h-1/2`}></View>
-      <View style={tw`h-1/2`}></View>
+
+      <View style={tw`h-1/2`}>
+        <Map />
+      </View>
+
+      <View style={tw`h-1/2`}>
+        
+      </View>
+      
     </View>
   );
 };
 
 export default MapScreen;
-

@@ -14,6 +14,8 @@ const NavigateCard = () => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const { origin } = useSelector(selectNavState);
+  const keyboardVerticalOffset = Platform.OS === 'ios' ? 400 : 40;
+
   return (
     <SafeAreaView style={tw`bg-white flex-1`}>
       <Text style={tw`text-center py-5 text-xl`}>Great Morning!</Text>

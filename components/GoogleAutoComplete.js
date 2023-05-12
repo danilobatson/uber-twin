@@ -8,6 +8,7 @@ import {
   selectNavState,
   setDestination,
 } from '../store/slices/navSlice';
+import { setAddress } from '../helper';
 
 const GoogleAutoComplete = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const GoogleAutoComplete = () => {
 
   useEffect(() => {
     if (!origin) return;
-    homeScreenRef.current?.setAddressText(origin.description);
+    setAddress(homeScreenRef, origin.description);
   }, [origin]);
 
   return (

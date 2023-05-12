@@ -8,6 +8,7 @@ import { useNavigation } from '@react-navigation/core';
 import { setDestination } from '../store/slices/navSlice';
 import NavFavorites from './NavFavorites';
 import { selectNavState } from '../store/slices/navSlice';
+import { setAddress } from '../helper';
 
 const NavigateCard = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const NavigateCard = () => {
 
   useEffect(() => {
     if (!destination) return;
-    mapScreenRef.current?.setAddressText(destination.description);
+    setAddress(mapScreenRef, destination.description);
   }, [destination]);
 
   return (
